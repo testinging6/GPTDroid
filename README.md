@@ -2,9 +2,30 @@
 
 We propose GPTDroid, asking LLM to chat with the mobile apps by passing the GUI page information to LLM to elicit testing scripts, and executing them to keep passing the app feedback to LLM, iterating the whole process. 
 
+GPTDroid demo video
+
+![Demo video](https://github.com/testinging6/GPTDroid/blob/main/GPTDroid-demo.gif) 
+
+We provide demo video as shown in below video for helping the understanding. The video link is: https://youtu.be/xvPURrLIr_w
+
+
 We give source code (./source code/)
 
 You can get the code through our source-code.
+
+#### Requirements
+* Android emulator
+* Ubuntu or Windows
+* Appium Desktop Client: [link](https://github.com/appium/appium-desktop/releases/tag/v1.22.3-4)
+* Python 3.7
+  * apkutils==0.10.2
+  * Appium-Python-Client==1.3.0
+  * Levenshtein==0.18.1
+  * lxml==4.8.0
+  * opencv-python==4.5.5.64
+  * sentence-transformers==1.0.3
+  * torch==1.6.0
+  * torchvision==0.7.0
 
 Fine tune your gpt-3 as follows, and the effect is the same.
 
