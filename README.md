@@ -56,11 +56,12 @@ Since the API of gpt-3 contains personal information, we will give our fine tune
 
 
 
-We give experiment dataset (./Usefulness evaluation/)
+We give experiment dataset (./Effectiveness evaluation; ./Usefulness evaluation/)
 
 ## Dataset (./experiment/)
 The experimental dataset for effectiveness evaluation and usefulness evaluation. 
-The first is the apks from effectiveness evaluation, which contains 66 + 20 apps, the app information as shown in table.
+
+The first is the apks from effectiveness evaluation, which contains 66 + 20 (20 from Themis benchmark) apps, the 66 app information as shown in table.
 
 Because the storage space of GitHub is limited to 2GB, and Google Play requires that individuals cannot upload apk without permission. You can download them on Google play through the information in the table.
 
