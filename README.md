@@ -41,7 +41,7 @@ Set your OPENAI_API_KEY environment variable by adding the following line into y
  `
 import openai
 openai.Completion.create(
-    model=FINE_TUNED_MODEL,
+    model=MODEL,
     prompt=YOUR_PROMPT)`
 
 Since the API of gpt-3 contains personal information, we will give our API key after the double-blind review. You can also use your personal API key.
