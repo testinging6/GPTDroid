@@ -1,5 +1,4 @@
-## Dataset (./experiment/)
-The experimental dataset for effectiveness evaluation and usefulness evaluation. 
+## Usefulness evaluation (./Usefulness evaluation/)
 
 The second is the apks confirmed or fixed from usefulness evaluation, the app information as shown in table.
 
@@ -32,3 +31,26 @@ Because the storage space of GitHub is limited to 2GB, and Google Play requires 
 23 | LessPass | Product  | 10K+ 
 24 | CEToolbox |  Medical  | 10K+  
 25 | OSM  | Health  | 10K+ 
+26 | AlarmClock | System | 1M+ 
+27 | AnotherMonitor | System | 1M+
+28 | Syncthing | Internet | 1M+ 
+29 | J2MELoader | Game | 1M+ 
+30 | Acrtions | Health | 1M+ 
+31 | Goodtime |Time | 500K+ \\
+32 | PDFConverter | Media | 100K+ \\
+33 | AppInt | Plugin |100K+ \\
+34 | Commons | Internet | 50K+ \\
+35 | Birday | Internet | 50K+ \\
+36 | Openboard | System | 50K+ \\
+37 | EVMap | Navig | 10K+ \\
+38 | Hendroid | Reading | 10K+ \\
+39 | Minesweep | Games | 10K+ \\
+40 | Democracy | Media | 10K+ \\
+41 | Easer | System | 10K+ \\
+42 | AutoClicker | System | 10K+ \\
+43 | Watomatic | Internet | 10K+ \\
+44 | ChessClock | Games | 10K+ \\
+45 | Look4Sat | Science | 10K+ \\
+46 | Forecastie | Science | 10K+ \\
+47 | Frost | Media | 10K+ \\
+48 | PicardScanner | Media & | 10K+ \\
