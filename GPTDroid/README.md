@@ -27,45 +27,16 @@ You can get the code through our source-code.
   * torch==1.6.0
   * torchvision==0.7.0
 
-Fine tune your gpt-3 as follows, and the effect is the same.
+Use the gpt-3 as follows, and the effect is the same.
 
 1.We recommend using our OpenAI command-line interface (CLI). To install this, run
 `pip install --upgrade openai`
 
 2.(The following instructions work for version 0.9.4 and up. Additionally, the OpenAI CLI requires python 3.)
 
-Set your OPENAI_API_KEY environment variable by adding the following line into your shell initialization script (e.g. .bashrc, zshrc, etc.) or running it in the command line before the fine-tuning command:
+Set your OPENAI_API_KEY environment variable by adding the following line into your shell initialization script (e.g. .bashrc, zshrc, etc.) or running it in the command line:
 
 `export OPENAI_API_KEY="<OPENAI_API_KEY>"`
-
-3.Prepare training data
-
-Training data is how you teach GPT-3 what you'd like it to say.
-Your data must be a JSONL document, where each line is a prompt-completion pair corresponding to a training example. You can use CLI data preparation tool to easily convert your data into this file format.
-
-`{"prompt": "<prompt text>", "completion": "<ideal generated text>"}`
-
-4. CLI data preparation tool
-We developed a tool which validates, gives suggestions and reformats your data:
-
-`openai tools fine_tunes.prepare_data -f <LOCAL_FILE>`
-
-5. Create a fine-tuned model
-
-`openai api fine_tunes.create -t <TRAIN_FILE_ID_OR_PATH> -m Curie`
-
-6. After you've started a fine-tune job, it may take some time to complete. Your job may be queued behind other jobs on our system, and training our model can take minutes or hours depending on the model and dataset size. If the event stream is interrupted for any reason, you can resume it by running:
-
-`openai api fine_tunes.follow -i <YOUR_FINE_TUNE_JOB_ID>`
-
-7. Use a fine-tuned model
-
-`openai api completions.create -m <FINE_TUNED_MODEL> -p <YOUR_PROMPT>`
-
-`curl https://api.openai.com/v1/completions \
-  -H "Authorization: Bearer $OPENAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"prompt": YOUR_PROMPT, "model": FINE_TUNED_MODEL}'`
   
  `
 import openai
