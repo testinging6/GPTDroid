@@ -27,7 +27,7 @@ You can get the code through our source-code.
   * torch==1.6.0
   * torchvision==0.7.0
 
-Use the gpt-3 as follows, and the effect is the same.
+Use the gpt-3 as follows.
 
 1.We recommend using our OpenAI command-line interface (CLI). To install this, run
 `pip install --upgrade openai`
@@ -44,7 +44,7 @@ openai.Completion.create(
     model=FINE_TUNED_MODEL,
     prompt=YOUR_PROMPT)`
 
-Since the API of gpt-3 contains personal information, we will give our API key after the double-blind review.
+Since the API of gpt-3 contains personal information, we will give our API key after the double-blind review. You can also use your personal API key.
 
 
 
