@@ -54,4 +54,4 @@ Because the storage space of GitHub is limited to 2GB, and Google Play requires 
 45 | Look4Sat | Science | 10K+ |  pending
 46 | Forecastie | Science | 10K+ |  pending
 47 | Frost | Media | 10K+ |  pending
-48 | PicardScanner | Media & | 10K+ |  pending
+48 | PicardScanner | Media | 10K+ |  pending
