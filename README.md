@@ -27,45 +27,16 @@ You can get the code through our source-code.
   * torch==1.6.0
   * torchvision==0.7.0
 
-Fine tune your gpt-3 as follows, and the effect is the same.
+Use the gpt-3 as follows, and the effect is the same.
 
 1.We recommend using our OpenAI command-line interface (CLI). To install this, run
 `pip install --upgrade openai`
 
 2.(The following instructions work for version 0.9.4 and up. Additionally, the OpenAI CLI requires python 3.)
 
-Set your OPENAI_API_KEY environment variable by adding the following line into your shell initialization script (e.g. .bashrc, zshrc, etc.) or running it in the command line before the fine-tuning command:
+Set your OPENAI_API_KEY environment variable by adding the following line into your shell initialization script (e.g. .bashrc, zshrc, etc.) or running it in the command line:
 
 `export OPENAI_API_KEY="<OPENAI_API_KEY>"`
-
-3.Prepare training data
-
-Training data is how you teach GPT-3 what you'd like it to say.
-Your data must be a JSONL document, where each line is a prompt-completion pair corresponding to a training example. You can use CLI data preparation tool to easily convert your data into this file format.
-
-`{"prompt": "<prompt text>", "completion": "<ideal generated text>"}`
-
-4. CLI data preparation tool
-We developed a tool which validates, gives suggestions and reformats your data:
-
-`openai tools fine_tunes.prepare_data -f <LOCAL_FILE>`
-
-5. Create a fine-tuned model
-
-`openai api fine_tunes.create -t <TRAIN_FILE_ID_OR_PATH> -m Curie`
-
-6. After you've started a fine-tune job, it may take some time to complete. Your job may be queued behind other jobs on our system, and training our model can take minutes or hours depending on the model and dataset size. If the event stream is interrupted for any reason, you can resume it by running:
-
-`openai api fine_tunes.follow -i <YOUR_FINE_TUNE_JOB_ID>`
-
-7. Use a fine-tuned model
-
-`openai api completions.create -m <FINE_TUNED_MODEL> -p <YOUR_PROMPT>`
-
-`curl https://api.openai.com/v1/completions \
-  -H "Authorization: Bearer $OPENAI_API_KEY" \
-  -H "Content-Type: application/json" \
-  -d '{"prompt": YOUR_PROMPT, "model": FINE_TUNED_MODEL}'`
   
  `
 import openai
@@ -79,10 +50,12 @@ Since the API of gpt-3 contains personal information, we will give our fine tune
 
 We give experiment dataset (./Effectiveness evaluation; ./Usefulness evaluation/)
 
-## Dataset (./experiment/)
-The experimental dataset for effectiveness evaluation and usefulness evaluation. 
+## Effectiveness evaluation (./Effectiveness evaluation/)
+The experimental dataset for effectiveness evaluation 
 
-The first is the apks from effectiveness evaluation, which contains 66 + 20 (20 from Themis benchmark) apps, the 66 app information as shown in table.
+The first is the apks from effectiveness evaluation, which contains 66 + 20 (20 from Themis benchmark) apps, the 66 apps information as shown in table.
+
+The 20 apps from Themis benchmark，you can find in the Themis benchmark.
 
 Because the storage space of GitHub is limited to 2GB, and Google Play requires that individuals cannot upload apk without permission. You can download them on Google play through the information in the table.
 
@@ -155,6 +128,7 @@ Because the storage space of GitHub is limited to 2GB, and Google Play requires 
 65 | Unstoppable  | 0.25.3 | Finance | 50K+
 66 | Funkwhale |  0.1.5 | music | 50K+
 
+## Usefulness evaluation (./Usefulness evaluation/)
 
 The second is the apks confirmed or fixed from usefulness evaluation, the app information as shown in table.
 
@@ -187,3 +161,27 @@ Because the storage space of GitHub is limited to 2GB, and Google Play requires 
 23 | LessPass | Product  | 10K+ 
 24 | CEToolbox |  Medical  | 10K+  
 25 | OSM  | Health  | 10K+ 
+26 | AlarmClock | System | 1M+ 
+27 | AnotherMonitor | System | 1M+
+28 | Syncthing | Internet | 1M+ 
+29 | J2MELoader | Game | 1M+ 
+30 | Acrtions | Health | 1M+ 
+31 | Goodtime |Time | 500K+ 
+32 | PDFConverter | Media | 100K+ 
+33 | AppInt | Plugin |100K+ 
+34 | Commons | Internet | 50K+ 
+35 | Birday | Internet | 50K+ 
+36 | Openboard | System | 50K+ 
+37 | EVMap | Navig | 10K+ 
+38 | Hendroid | Reading | 10K+ 
+39 | Minesweep | Games | 10K+ 
+40 | Democracy | Media | 10K+ 
+41 | Easer | System | 10K+ 
+42 | AutoClicker | System | 10K+ 
+43 | Watomatic | Internet | 10K+ 
+44 | ChessClock | Games | 10K+ 
+45 | Look4Sat | Science | 10K+ 
+46 | Forecastie | Science | 10K+ 
+47 | Frost | Media | 10K+ 
+48 | PicardScanner | Media & | 10K+ 
+
