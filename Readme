@@ -1,5 +1,6 @@
 # GPTDroid
 
+
 We propose GPTDroid, asking LLM to chat with the mobile apps by passing the GUI page information to LLM to elicit testing scripts, and executing them to keep passing the app feedback to LLM, iterating the whole process. 
 
 GPTDroid demo video
